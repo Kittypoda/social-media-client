@@ -8,10 +8,10 @@ export default [
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
-      globals: globals.browser, // Adding browser-specific globals like "window", "document", etc.
+      globals: globals.browser, 
     },
     rules: {
-      // Add any additional rules for regular JavaScript files here
+     
     },
   },
   {
@@ -19,16 +19,16 @@ export default [
     languageOptions: {
       ecmaVersion: "latest",
       globals: {
-        ...globals.browser,  // Keeping browser globals
-        ...globals.jest,     // Adding Jest globals like "describe", "it", "expect", etc.
+        ...globals.browser,  
+        ...globals.jest,     
       },
     },
     plugins: {
       jest: pluginJest,
     },
     rules: {
-      "jest/prefer-expect-assertions": "off", // Example rule for Jest tests
+      "jest/prefer-expect-assertions": "off", 
     },
   },
-  pluginJs.configs.recommended,  // Include the recommended config from @eslint/js plugin
+  pluginJs.configs.recommended,  
 ];
