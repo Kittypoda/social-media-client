@@ -11,24 +11,26 @@ export default [
       globals: globals.browser, 
     },
     rules: {
-     
+    
     },
   },
   {
-    files: ["**/*.test.js"],
+    files: ["**/*.test.js"], 
     languageOptions: {
       ecmaVersion: "latest",
+      sourceType: "module", 
       globals: {
-        ...globals.browser,  
-        ...globals.jest,     
+        ...globals.browser, 
+        ...globals.jest,    
       },
     },
     plugins: {
       jest: pluginJest,
     },
     rules: {
-      "jest/prefer-expect-assertions": "off", 
+      "jest/prefer-expect-assertions": "off",
     },
   },
-  pluginJs.configs.recommended,  
+  pluginJs.configs.recommended,
 ];
+
